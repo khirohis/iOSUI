@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0C9DD31A91938000146584 /* CoreDataContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9DD21A91938000146584 /* CoreDataContextManager.m */; };
+		8A0C9DD51A91958B00146584 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0C9DD41A91958B00146584 /* CoreData.framework */; };
 		A1C1FAFD1A87AD1A00FF3F03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1FAFC1A87AD1A00FF3F03 /* main.m */; };
 		A1C1FB001A87AD1A00FF3F03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1FAFF1A87AD1A00FF3F03 /* AppDelegate.m */; };
 		A1C1FB031A87AD1A00FF3F03 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1FB021A87AD1A00FF3F03 /* MasterViewController.m */; };
@@ -28,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A0C9DD11A91938000146584 /* CoreDataContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataContextManager.h; sourceTree = "<group>"; };
+		8A0C9DD21A91938000146584 /* CoreDataContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataContextManager.m; sourceTree = "<group>"; };
+		8A0C9DD41A91958B00146584 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A1C1FAF71A87AD1A00FF3F03 /* iOSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C1FAFB1A87AD1A00FF3F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C1FAFC1A87AD1A00FF3F03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0C9DD51A91958B00146584 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,11 +69,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A0C9DD01A9192F000146584 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8A0C9DD71A9195BD00146584 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				8A0C9DD41A91958B00146584 /* CoreData.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		A1C1FAEE1A87AD1A00FF3F03 = {
 			isa = PBXGroup;
 			children = (
 				A1C1FAF91A87AD1A00FF3F03 /* iOSUI */,
 				A1C1FB161A87AD1A00FF3F03 /* iOSUITests */,
+				8A0C9DD71A9195BD00146584 /* Framework */,
 				A1C1FAF81A87AD1A00FF3F03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +115,9 @@
 				A1C1FB071A87AD1A00FF3F03 /* Main.storyboard */,
 				A1C1FB0A1A87AD1A00FF3F03 /* Images.xcassets */,
 				A1C1FB0C1A87AD1A00FF3F03 /* LaunchScreen.xib */,
+				8A0C9DD11A91938000146584 /* CoreDataContextManager.h */,
+				8A0C9DD21A91938000146584 /* CoreDataContextManager.m */,
+				8A0C9DD01A9192F000146584 /* CoreData */,
 				A1C1FAFA1A87AD1A00FF3F03 /* Supporting Files */,
 			);
 			path = iOSUI;
@@ -224,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0C9DD31A91938000146584 /* CoreDataContextManager.m in Sources */,
 				A1C1FB001A87AD1A00FF3F03 /* AppDelegate.m in Sources */,
 				A1C1FB031A87AD1A00FF3F03 /* MasterViewController.m in Sources */,
 				A1C1FAFD1A87AD1A00FF3F03 /* main.m in Sources */,
@@ -420,6 +446,7 @@
 				A1C1FB1F1A87AD1A00FF3F03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1C1FB201A87AD1A00FF3F03 /* Build configuration list for PBXNativeTarget "iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +455,7 @@
 				A1C1FB221A87AD1A00FF3F03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,39 +8,88 @@
 
 #import "DetailViewController.h"
 
+
+typedef NS_ENUM(NSInteger, Sections)
+{
+    COREDATA_SECTION        = 0,
+    SECTION_MAX
+};
+
+typedef NS_ENUM(NSInteger, CoredataRows)
+{
+    COREDATA_ROW_TEST1      = 0,
+    COREDATA_ROW_MAX
+};
+
+
 @interface DetailViewController ()
 
 @end
+
 
 @implementation DetailViewController
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem {
+- (void)setDetailItem:(id)newDetailItem
+{
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
             
-        // Update the view.
         [self configureView];
     }
 }
 
-- (void)configureView {
-    // Update the user interface for the detail item.
+- (void)configureView
+{
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
     }
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
     [self configureView];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Table View
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return SECTION_MAX;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
+{
+    NSInteger rows = 0;
+
+    switch (section) {
+        case COREDATA_SECTION:
+            rows = COREDATA_ROW_MAX;
+
+        default:
+            break;
+    }
+
+    return rows;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = @"Kuma!";
+    
+    return cell;
 }
 
 @end
