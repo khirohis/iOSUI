@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8A0C9DD31A91938000146584 /* CoreDataContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9DD21A91938000146584 /* CoreDataContextManager.m */; };
 		8A0C9DD51A91958B00146584 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0C9DD41A91958B00146584 /* CoreData.framework */; };
+		8ADC6B9E1A931D52000FE9EE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6B9D1A931D52000FE9EE /* Constants.m */; };
+		8ADC6BA11A93410D000FE9EE /* TestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA01A93410D000FE9EE /* TestOperation.m */; };
+		8ADC6BA41A9352B5000FE9EE /* CoreDataTest1Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA31A9352B5000FE9EE /* CoreDataTest1Operation.m */; };
+		8ADC6BA81A93531B000FE9EE /* TestOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA61A93531B000FE9EE /* TestOperationViewController.m */; };
+		8ADC6BA91A93531B000FE9EE /* TestOperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA71A93531B000FE9EE /* TestOperationViewController.xib */; };
 		A1C1FAFD1A87AD1A00FF3F03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1FAFC1A87AD1A00FF3F03 /* main.m */; };
 		A1C1FB001A87AD1A00FF3F03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1FAFF1A87AD1A00FF3F03 /* AppDelegate.m */; };
 		A1C1FB031A87AD1A00FF3F03 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1FB021A87AD1A00FF3F03 /* MasterViewController.m */; };
@@ -33,6 +38,15 @@
 		8A0C9DD11A91938000146584 /* CoreDataContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataContextManager.h; sourceTree = "<group>"; };
 		8A0C9DD21A91938000146584 /* CoreDataContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataContextManager.m; sourceTree = "<group>"; };
 		8A0C9DD41A91958B00146584 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8ADC6B9C1A931A5A000FE9EE /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8ADC6B9D1A931D52000FE9EE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		8ADC6B9F1A93410D000FE9EE /* TestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOperation.h; sourceTree = "<group>"; };
+		8ADC6BA01A93410D000FE9EE /* TestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOperation.m; sourceTree = "<group>"; };
+		8ADC6BA21A9352B5000FE9EE /* CoreDataTest1Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTest1Operation.h; sourceTree = "<group>"; };
+		8ADC6BA31A9352B5000FE9EE /* CoreDataTest1Operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTest1Operation.m; sourceTree = "<group>"; };
+		8ADC6BA51A93531B000FE9EE /* TestOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOperationViewController.h; sourceTree = "<group>"; };
+		8ADC6BA61A93531B000FE9EE /* TestOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOperationViewController.m; sourceTree = "<group>"; };
+		8ADC6BA71A93531B000FE9EE /* TestOperationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestOperationViewController.xib; sourceTree = "<group>"; };
 		A1C1FAF71A87AD1A00FF3F03 /* iOSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C1FAFB1A87AD1A00FF3F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C1FAFC1A87AD1A00FF3F03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,6 +86,8 @@
 		8A0C9DD01A9192F000146584 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				8ADC6BA21A9352B5000FE9EE /* CoreDataTest1Operation.h */,
+				8ADC6BA31A9352B5000FE9EE /* CoreDataTest1Operation.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -106,6 +122,8 @@
 		A1C1FAF91A87AD1A00FF3F03 /* iOSUI */ = {
 			isa = PBXGroup;
 			children = (
+				8ADC6B9C1A931A5A000FE9EE /* Constants.h */,
+				8ADC6B9D1A931D52000FE9EE /* Constants.m */,
 				A1C1FAFE1A87AD1A00FF3F03 /* AppDelegate.h */,
 				A1C1FAFF1A87AD1A00FF3F03 /* AppDelegate.m */,
 				A1C1FB011A87AD1A00FF3F03 /* MasterViewController.h */,
@@ -115,6 +133,11 @@
 				A1C1FB071A87AD1A00FF3F03 /* Main.storyboard */,
 				A1C1FB0A1A87AD1A00FF3F03 /* Images.xcassets */,
 				A1C1FB0C1A87AD1A00FF3F03 /* LaunchScreen.xib */,
+				8ADC6B9F1A93410D000FE9EE /* TestOperation.h */,
+				8ADC6BA01A93410D000FE9EE /* TestOperation.m */,
+				8ADC6BA51A93531B000FE9EE /* TestOperationViewController.h */,
+				8ADC6BA61A93531B000FE9EE /* TestOperationViewController.m */,
+				8ADC6BA71A93531B000FE9EE /* TestOperationViewController.xib */,
 				8A0C9DD11A91938000146584 /* CoreDataContextManager.h */,
 				8A0C9DD21A91938000146584 /* CoreDataContextManager.m */,
 				8A0C9DD01A9192F000146584 /* CoreData */,
@@ -229,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ADC6BA91A93531B000FE9EE /* TestOperationViewController.xib in Resources */,
 				A1C1FB091A87AD1A00FF3F03 /* Main.storyboard in Resources */,
 				A1C1FB0E1A87AD1A00FF3F03 /* LaunchScreen.xib in Resources */,
 				A1C1FB0B1A87AD1A00FF3F03 /* Images.xcassets in Resources */,
@@ -249,11 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ADC6BA41A9352B5000FE9EE /* CoreDataTest1Operation.m in Sources */,
+				8ADC6BA81A93531B000FE9EE /* TestOperationViewController.m in Sources */,
 				8A0C9DD31A91938000146584 /* CoreDataContextManager.m in Sources */,
 				A1C1FB001A87AD1A00FF3F03 /* AppDelegate.m in Sources */,
 				A1C1FB031A87AD1A00FF3F03 /* MasterViewController.m in Sources */,
+				8ADC6BA11A93410D000FE9EE /* TestOperation.m in Sources */,
 				A1C1FAFD1A87AD1A00FF3F03 /* main.m in Sources */,
 				A1C1FB061A87AD1A00FF3F03 /* DetailViewController.m in Sources */,
+				8ADC6B9E1A931D52000FE9EE /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
