@@ -10,6 +10,6 @@
 
 @interface DetailViewController : UITableViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) NSNumber *category;
 
 @end

@@ -6,13 +6,12 @@
 //  Copyright (c) 2015年 khirohis. All rights reserved.
 //
 
+#import "Constants.h"
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 
 
 @interface MasterViewController ()
-
-@property (nonatomic, strong) NSArray *objects;
 
 @end
 
@@ -33,10 +32,6 @@
 {
     [super viewDidLoad];
 
-    self.objects = @[
-                     @"CoreData",
-                     ];
-
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -53,9 +48,11 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        NSNumber *object = @(indexPath.row);
+
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        controller.category = object;
+
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
@@ -72,7 +69,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return self.objects.count;
+    return CATEGORY_MAX;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -80,8 +77,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSString *object = self.objects[indexPath.row];
-    cell.textLabel.text = object;
+    cell.textLabel.text = cCategoryTitles[indexPath.row];
 
     return cell;
 }

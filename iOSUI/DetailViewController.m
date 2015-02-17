@@ -6,23 +6,17 @@
 //  Copyright (c) 2015年 khirohis. All rights reserved.
 //
 
+#import "Constants.h"
 #import "DetailViewController.h"
-
-
-typedef NS_ENUM(NSInteger, Sections)
-{
-    COREDATA_SECTION        = 0,
-    SECTION_MAX
-};
-
-typedef NS_ENUM(NSInteger, CoredataRows)
-{
-    COREDATA_ROW_TEST1      = 0,
-    COREDATA_ROW_MAX
-};
+#import "TestOperationViewController.h"
+#import "CoreDataTest1Operation.h"
 
 
 @interface DetailViewController ()
+
+- (void)didSelectCoreDataRow:(NSInteger)row;
+
+- (void)presentTestOperationViewWithOperation:(TestOperation *)operation;
 
 @end
 
@@ -31,18 +25,18 @@ typedef NS_ENUM(NSInteger, CoredataRows)
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setCategory:(NSNumber *)category
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-            
+    if (_category != category) {
+        _category = category;
+
         [self configureView];
     }
 }
 
 - (void)configureView
 {
-    if (self.detailItem) {
+    if (self.category) {
     }
 }
 
@@ -63,33 +57,83 @@ typedef NS_ENUM(NSInteger, CoredataRows)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return SECTION_MAX;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger rows = 0;
+    NSInteger row = 0;
 
-    switch (section) {
-        case COREDATA_SECTION:
-            rows = COREDATA_ROW_MAX;
+    NSInteger category = [self.category integerValue];
+    switch (category) {
+
+        case CATEGORY_COREDATA:
+            row = COREDATA_ROW_MAX;
 
         default:
             break;
     }
 
-    return rows;
+    return row;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = @"Kuma!";
-    
+
+    NSString *title = @"";
+
+    NSInteger category = [self.category integerValue];
+    switch (category) {
+
+        case CATEGORY_COREDATA:
+            title = cCoreDataRowTitles[indexPath.row];
+            break;
+
+        default:
+            break;
+    }
+
+    cell.textLabel.text = title;
+
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView
+ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger category = [self.category integerValue];
+    switch (category) {
+            
+        case CATEGORY_COREDATA:
+            [self didSelectCoreDataRow:indexPath.row];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)didSelectCoreDataRow:(NSInteger)row
+{
+    switch (row) {
+
+        case COREDATA_ROW_TEST1:
+            [self presentTestOperationViewWithOperation:[[CoreDataTest1Operation alloc] init]];
+            break;
+
+        default:
+            break;
+    }
+}
+
+- (void)presentTestOperationViewWithOperation:(TestOperation *)operation
+{
+    TestOperationViewController *vc = [[TestOperationViewController alloc] initWithNibName:@"TestOperationViewController" bundle:nil];
+    vc.operation = operation;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end
