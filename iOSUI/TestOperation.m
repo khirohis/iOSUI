@@ -32,11 +32,6 @@
     return self;
 }
 
-- (BOOL)isAsynchronous
-{
-    return YES;
-}
-
 - (void)setDelegate:(id<TestOperationDelegate>)delegate
 {
     _delegate = delegate;

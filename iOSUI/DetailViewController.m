@@ -25,8 +25,7 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setCategory:(NSNumber *)category
-{
+- (void)setCategory:(NSNumber *)category {
     if (_category != category) {
         _category = category;
 
@@ -34,35 +33,31 @@
     }
 }
 
-- (void)configureView
-{
+- (void)configureView {
     if (self.category) {
     }
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     [self configureView];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
 
 #pragma mark - Table View
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
- numberOfRowsInSection:(NSInteger)section
-{
+ numberOfRowsInSection:(NSInteger)section {
+
     NSInteger row = 0;
 
     NSInteger category = [self.category integerValue];
@@ -79,8 +74,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSString *title = @"";
@@ -102,8 +97,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView
- didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
     NSInteger category = [self.category integerValue];
     switch (category) {
             
@@ -116,8 +111,7 @@
     }
 }
 
-- (void)didSelectCoreDataRow:(NSInteger)row
-{
+- (void)didSelectCoreDataRow:(NSInteger)row {
     switch (row) {
 
         case COREDATA_ROW_TEST1:
@@ -129,11 +123,11 @@
     }
 }
 
-- (void)presentTestOperationViewWithOperation:(TestOperation *)operation
-{
+- (void)presentTestOperationViewWithOperation:(TestOperation *)operation {
     TestOperationViewController *vc = [[TestOperationViewController alloc] initWithNibName:@"TestOperationViewController" bundle:nil];
     vc.operation = operation;
     [self presentViewController:vc animated:YES completion:nil];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
