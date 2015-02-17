@@ -20,7 +20,7 @@
 
 @interface TestOperation : NSOperation
 
-@property (nonatomic, weak) id<TestOperationDelegate> delegate;
-@property (nonatomic, strong) NSString *result;
+@property (weak, nonatomic) id<TestOperationDelegate> delegate;
+@property (strong, nonatomic) NSString *result;
 
 @end

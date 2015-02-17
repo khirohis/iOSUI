@@ -12,6 +12,6 @@
 
 @interface TestOperationViewController : UIViewController <TestOperationDelegate>
 
-@property (nonatomic, strong) TestOperation *operation;
+@property (strong, nonatomic) TestOperation *operation;
 
 @end
