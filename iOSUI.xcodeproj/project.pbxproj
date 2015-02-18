@@ -16,6 +16,9 @@
 		8ADC6BA41A9352B5000FE9EE /* CoreDataTest1Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA31A9352B5000FE9EE /* CoreDataTest1Operation.m */; };
 		8ADC6BA81A93531B000FE9EE /* TestOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA61A93531B000FE9EE /* TestOperationViewController.m */; };
 		8ADC6BA91A93531B000FE9EE /* TestOperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA71A93531B000FE9EE /* TestOperationViewController.xib */; };
+		A10F69E21A94BC7200AE08F1 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F69E11A94BC7200AE08F1 /* BaseEntity.m */; };
+		A10F69E51A94BC7300AE08F1 /* ItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F69E41A94BC7300AE08F1 /* ItemEntity.m */; };
+		A10F69E81A94BC7300AE08F1 /* ListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A10F69E71A94BC7300AE08F1 /* ListEntity.m */; };
 		A1C1FAFD1A87AD1A00FF3F03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1FAFC1A87AD1A00FF3F03 /* main.m */; };
 		A1C1FB001A87AD1A00FF3F03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1FAFF1A87AD1A00FF3F03 /* AppDelegate.m */; };
 		A1C1FB031A87AD1A00FF3F03 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C1FB021A87AD1A00FF3F03 /* MasterViewController.m */; };
@@ -37,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8A0C9DD11A91938000146584 /* CoreDataContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataContextManager.h; sourceTree = "<group>"; };
-		8A0C9DD21A91938000146584 /* CoreDataContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataContextManager.m; sourceTree = "<group>"; };
+		8A0C9DD11A91938000146584 /* CoreDataContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataContextManager.h; path = iOSUI/CoreDataContextManager.h; sourceTree = SOURCE_ROOT; };
+		8A0C9DD21A91938000146584 /* CoreDataContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataContextManager.m; path = iOSUI/CoreDataContextManager.m; sourceTree = SOURCE_ROOT; };
 		8A0C9DD41A91958B00146584 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8A349B861A94546100CA6775 /* iOSUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSUI.xcdatamodel; sourceTree = "<group>"; };
 		8A349B891A94601600CA6775 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -52,6 +55,12 @@
 		8ADC6BA51A93531B000FE9EE /* TestOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOperationViewController.h; sourceTree = "<group>"; };
 		8ADC6BA61A93531B000FE9EE /* TestOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOperationViewController.m; sourceTree = "<group>"; };
 		8ADC6BA71A93531B000FE9EE /* TestOperationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestOperationViewController.xib; sourceTree = "<group>"; };
+		A10F69E01A94BC7200AE08F1 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		A10F69E11A94BC7200AE08F1 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		A10F69E31A94BC7300AE08F1 /* ItemEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemEntity.h; sourceTree = "<group>"; };
+		A10F69E41A94BC7300AE08F1 /* ItemEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemEntity.m; sourceTree = "<group>"; };
+		A10F69E61A94BC7300AE08F1 /* ListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListEntity.h; sourceTree = "<group>"; };
+		A10F69E71A94BC7300AE08F1 /* ListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListEntity.m; sourceTree = "<group>"; };
 		A1C1FAF71A87AD1A00FF3F03 /* iOSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C1FAFB1A87AD1A00FF3F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C1FAFC1A87AD1A00FF3F03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +100,12 @@
 		8A0C9DD01A9192F000146584 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A10F69E01A94BC7200AE08F1 /* BaseEntity.h */,
+				A10F69E11A94BC7200AE08F1 /* BaseEntity.m */,
+				A10F69E31A94BC7300AE08F1 /* ItemEntity.h */,
+				A10F69E41A94BC7300AE08F1 /* ItemEntity.m */,
+				A10F69E61A94BC7300AE08F1 /* ListEntity.h */,
+				A10F69E71A94BC7300AE08F1 /* ListEntity.m */,
 				8ADC6BA21A9352B5000FE9EE /* CoreDataTest1Operation.h */,
 				8ADC6BA31A9352B5000FE9EE /* CoreDataTest1Operation.m */,
 			);
@@ -283,11 +298,14 @@
 			files = (
 				8ADC6BA41A9352B5000FE9EE /* CoreDataTest1Operation.m in Sources */,
 				8ADC6BA81A93531B000FE9EE /* TestOperationViewController.m in Sources */,
+				A10F69E81A94BC7300AE08F1 /* ListEntity.m in Sources */,
 				8A0C9DD31A91938000146584 /* CoreDataContextManager.m in Sources */,
 				A1C1FB001A87AD1A00FF3F03 /* AppDelegate.m in Sources */,
 				A1C1FB031A87AD1A00FF3F03 /* MasterViewController.m in Sources */,
 				8ADC6BA11A93410D000FE9EE /* TestOperation.m in Sources */,
 				8A349B8B1A94601600CA6775 /* Application.m in Sources */,
+				A10F69E21A94BC7200AE08F1 /* BaseEntity.m in Sources */,
+				A10F69E51A94BC7300AE08F1 /* ItemEntity.m in Sources */,
 				A1C1FAFD1A87AD1A00FF3F03 /* main.m in Sources */,
 				8A349B871A94546100CA6775 /* iOSUI.xcdatamodeld in Sources */,
 				A1C1FB061A87AD1A00FF3F03 /* DetailViewController.m in Sources */,
