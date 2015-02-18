@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8A0C9DD31A91938000146584 /* CoreDataContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9DD21A91938000146584 /* CoreDataContextManager.m */; };
 		8A0C9DD51A91958B00146584 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0C9DD41A91958B00146584 /* CoreData.framework */; };
+		8A349B871A94546100CA6775 /* iOSUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A349B851A94546100CA6775 /* iOSUI.xcdatamodeld */; };
+		8A349B8B1A94601600CA6775 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A349B8A1A94601600CA6775 /* Application.m */; };
 		8ADC6B9E1A931D52000FE9EE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6B9D1A931D52000FE9EE /* Constants.m */; };
 		8ADC6BA11A93410D000FE9EE /* TestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA01A93410D000FE9EE /* TestOperation.m */; };
 		8ADC6BA41A9352B5000FE9EE /* CoreDataTest1Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA31A9352B5000FE9EE /* CoreDataTest1Operation.m */; };
@@ -38,6 +40,9 @@
 		8A0C9DD11A91938000146584 /* CoreDataContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataContextManager.h; sourceTree = "<group>"; };
 		8A0C9DD21A91938000146584 /* CoreDataContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataContextManager.m; sourceTree = "<group>"; };
 		8A0C9DD41A91958B00146584 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8A349B861A94546100CA6775 /* iOSUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSUI.xcdatamodel; sourceTree = "<group>"; };
+		8A349B891A94601600CA6775 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		8A349B8A1A94601600CA6775 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
 		8ADC6B9C1A931A5A000FE9EE /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8ADC6B9D1A931D52000FE9EE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		8ADC6B9F1A93410D000FE9EE /* TestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOperation.h; sourceTree = "<group>"; };
@@ -124,6 +129,8 @@
 			children = (
 				8ADC6B9C1A931A5A000FE9EE /* Constants.h */,
 				8ADC6B9D1A931D52000FE9EE /* Constants.m */,
+				8A349B891A94601600CA6775 /* Application.h */,
+				8A349B8A1A94601600CA6775 /* Application.m */,
 				A1C1FAFE1A87AD1A00FF3F03 /* AppDelegate.h */,
 				A1C1FAFF1A87AD1A00FF3F03 /* AppDelegate.m */,
 				A1C1FB011A87AD1A00FF3F03 /* MasterViewController.h */,
@@ -140,6 +147,7 @@
 				8ADC6BA71A93531B000FE9EE /* TestOperationViewController.xib */,
 				8A0C9DD11A91938000146584 /* CoreDataContextManager.h */,
 				8A0C9DD21A91938000146584 /* CoreDataContextManager.m */,
+				8A349B851A94546100CA6775 /* iOSUI.xcdatamodeld */,
 				8A0C9DD01A9192F000146584 /* CoreData */,
 				A1C1FAFA1A87AD1A00FF3F03 /* Supporting Files */,
 			);
@@ -279,7 +287,9 @@
 				A1C1FB001A87AD1A00FF3F03 /* AppDelegate.m in Sources */,
 				A1C1FB031A87AD1A00FF3F03 /* MasterViewController.m in Sources */,
 				8ADC6BA11A93410D000FE9EE /* TestOperation.m in Sources */,
+				8A349B8B1A94601600CA6775 /* Application.m in Sources */,
 				A1C1FAFD1A87AD1A00FF3F03 /* main.m in Sources */,
+				8A349B871A94546100CA6775 /* iOSUI.xcdatamodeld in Sources */,
 				A1C1FB061A87AD1A00FF3F03 /* DetailViewController.m in Sources */,
 				8ADC6B9E1A931D52000FE9EE /* Constants.m in Sources */,
 			);
@@ -486,6 +496,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8A349B851A94546100CA6775 /* iOSUI.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8A349B861A94546100CA6775 /* iOSUI.xcdatamodel */,
+			);
+			currentVersion = 8A349B861A94546100CA6775 /* iOSUI.xcdatamodel */;
+			path = iOSUI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1C1FAEF1A87AD1A00FF3F03 /* Project object */;
 }

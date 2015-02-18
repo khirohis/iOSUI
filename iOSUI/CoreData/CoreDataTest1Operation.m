@@ -7,11 +7,16 @@
 //
 
 #import "CoreDataTest1Operation.h"
+#import "Application.h"
+#import "CoreDataContextManager.h"
+
 
 @implementation CoreDataTest1Operation
 
-- (void)main
-{
+- (void)main {
+    CoreDataContextManager *manager = [[Application sharedApplication] sharedCoreDataContextManager];
+    NSManagedObjectContext *context = [manager managedObjectContext];
+
     self.result = @"KUMA!";
 }
 
