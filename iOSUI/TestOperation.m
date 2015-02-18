@@ -17,8 +17,7 @@
 
 @implementation TestOperation
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self != nil) {
         __weak id weakSelf = self;
@@ -32,13 +31,11 @@
     return self;
 }
 
-- (void)setDelegate:(id<TestOperationDelegate>)delegate
-{
+- (void)setDelegate:(id<TestOperationDelegate>)delegate {
     _delegate = delegate;
 }
 
-- (void)onComplete
-{
+- (void)onComplete {
     if ([self.delegate conformsToProtocol:@protocol(TestOperationDelegate)]) {
         [self.delegate onComplete:self result:self.result];
     }

@@ -27,8 +27,8 @@
 
 
 - (id)initWithModelURL:(NSURL *)modelURL
-              storeURL:(NSURL *)storeUrl
-{
+              storeURL:(NSURL *)storeUrl {
+
     self = [super init];
     if (self != nil) {
         _modelUrl = modelURL;
@@ -64,16 +64,14 @@
 }
 
 
-- (void)saveWriteContext
-{
+- (void)saveWriteContext {
     [self.writeContext performBlockAndWait:^{
         [self.writeContext save:nil];
     }];
 }
 
 
-- (NSManagedObjectContext *)managedObjectContext
-{
+- (NSManagedObjectContext *)managedObjectContext {
     if ([NSThread isMainThread]) {
         return self.mainContext;
     }
@@ -86,9 +84,8 @@
 
 
 - (void)saveContext:(NSManagedObjectContext *)context
-      didSavedBlock:(void (^)(BOOL))block
+      didSavedBlock:(void (^)(BOOL))block {
 
-{
     if (context != nil && [context hasChanges]) {
         if (context == self.writeContext) {
             [context performBlock:^{
