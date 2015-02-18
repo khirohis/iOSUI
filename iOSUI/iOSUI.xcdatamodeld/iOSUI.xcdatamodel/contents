@@ -13,9 +13,10 @@
         <attribute name="listType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemEntity" inverseName="list" inverseEntity="ItemEntity" syncable="YES"/>
     </entity>
+    <fetchRequest name="AllItemEntity" entity="ItemEntity"/>
     <elements>
         <element name="BaseEntity" positionX="151" positionY="56" width="128" height="88"/>
-        <element name="ListEntity" positionX="270" positionY="215" width="117" height="73"/>
         <element name="ItemEntity" positionX="43" positionY="215" width="128" height="73"/>
+        <element name="ListEntity" positionX="270" positionY="215" width="117" height="73"/>
     </elements>
 </model>

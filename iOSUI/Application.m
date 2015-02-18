@@ -38,6 +38,7 @@
 
     self.coreDataContextManager = [[CoreDataContextManager alloc] initWithModelURL:modelUrl
                                                                           storeURL:storeUrl];
+    [self.coreDataContextManager initialize];
 }
 
 
