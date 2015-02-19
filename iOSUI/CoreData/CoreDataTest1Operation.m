@@ -32,7 +32,7 @@
         }
     }
 
-    [manager saveContext:context didSavedBlock:nil];
+    [manager saveAndWaitContext:context];
 
     // create item1
     ItemEntity *item1 = [[ItemEntity alloc] initWithEntity:entity
@@ -44,7 +44,7 @@
 
     item1.itemType = [NSNumber numberWithShort:1];
 
-    [manager saveContext:context didSavedBlock:nil];
+    [manager saveAndWaitContext:context];
 
     // create copy
     ItemEntity *item2 = [[ItemEntity alloc] initWithEntity:entity
@@ -54,7 +54,7 @@
     // delete item1
     [context deleteObject:item1];
 
-    [manager saveContext:context didSavedBlock:nil];
+    [manager saveAndWaitContext:context];
 
     // build result string
     NSMutableString *result = [[NSMutableString alloc] init];
