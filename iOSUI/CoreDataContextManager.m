@@ -83,6 +83,35 @@
 }
 
 
+- (BOOL)saveAndWaitContext:(NSManagedObjectContext *)context {
+
+    __block BOOL result = NO;
+
+    if (context != nil && [context hasChanges]) {
+        if (context == self.writeContext) {
+            [context performBlockAndWait:^{
+                if ([context save:nil]) {
+                    result = YES;
+                }
+            }];
+        } else if (context == self.mainContext) {
+            [context performBlockAndWait:^{
+                if ([context save:nil]) {
+                    result = [self saveAndWaitContext:self.writeContext];
+                }
+            }];
+        } else {
+            [context performBlockAndWait:^{
+                if ([context save:nil]) {
+                    result = [self saveAndWaitContext:self.mainContext];
+                }
+            }];
+        }
+    }
+
+    return result;
+}
+
 - (void)saveContext:(NSManagedObjectContext *)context
       didSavedBlock:(void (^)(BOOL))block {
 

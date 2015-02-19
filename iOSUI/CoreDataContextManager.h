@@ -20,6 +20,8 @@
 - (void)saveWriteContext;
 
 - (NSManagedObjectContext *)managedObjectContext;
+
+- (BOOL)saveAndWaitContext:(NSManagedObjectContext *)context;
 - (void)saveContext:(NSManagedObjectContext *)managedObjectContext
       didSavedBlock:(void (^)(BOOL))block;
 
