@@ -11,6 +11,7 @@
 		8A0C9DD51A91958B00146584 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0C9DD41A91958B00146584 /* CoreData.framework */; };
 		8A349B871A94546100CA6775 /* iOSUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A349B851A94546100CA6775 /* iOSUI.xcdatamodeld */; };
 		8A349B8B1A94601600CA6775 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A349B8A1A94601600CA6775 /* Application.m */; };
+		8A63B04D1AC969EA00D22D6B /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A63B04C1AC969EA00D22D6B /* GlanceController.m */; };
 		8ADC6B9E1A931D52000FE9EE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6B9D1A931D52000FE9EE /* Constants.m */; };
 		8ADC6BA11A93410D000FE9EE /* TestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA01A93410D000FE9EE /* TestOperation.m */; };
 		8ADC6BA41A9352B5000FE9EE /* CoreDataTest1Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC6BA31A9352B5000FE9EE /* CoreDataTest1Operation.m */; };
@@ -81,6 +82,8 @@
 		8A349B861A94546100CA6775 /* iOSUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSUI.xcdatamodel; sourceTree = "<group>"; };
 		8A349B891A94601600CA6775 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		8A349B8A1A94601600CA6775 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
+		8A63B04B1AC969EA00D22D6B /* GlanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		8A63B04C1AC969EA00D22D6B /* GlanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
 		8ADC6B9C1A931A5A000FE9EE /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8ADC6B9D1A931D52000FE9EE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		8ADC6B9F1A93410D000FE9EE /* TestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOperation.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				A16DADCE1AC7E2A900B451AF /* InterfaceController.m */,
 				A16DADD01AC7E2A900B451AF /* NotificationController.h */,
 				A16DADD11AC7E2A900B451AF /* NotificationController.m */,
+				8A63B04B1AC969EA00D22D6B /* GlanceController.h */,
+				8A63B04C1AC969EA00D22D6B /* GlanceController.m */,
 				A16DADD31AC7E2A900B451AF /* Images.xcassets */,
 				A16DADCA1AC7E2A900B451AF /* Supporting Files */,
 			);
@@ -457,6 +462,7 @@
 			files = (
 				A16DADD21AC7E2A900B451AF /* NotificationController.m in Sources */,
 				A16DADCF1AC7E2A900B451AF /* InterfaceController.m in Sources */,
+				8A63B04D1AC969EA00D22D6B /* GlanceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +745,7 @@
 				A16DADE91AC7E2A900B451AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A16DADEB1AC7E2A900B451AF /* Build configuration list for PBXNativeTarget "iOSUI WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -747,6 +754,7 @@
 				A16DADE71AC7E2A900B451AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1C1FAF21A87AD1A00FF3F03 /* Build configuration list for PBXProject "iOSUI" */ = {
 			isa = XCConfigurationList;
