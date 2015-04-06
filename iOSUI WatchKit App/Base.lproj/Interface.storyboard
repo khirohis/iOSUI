@@ -10,7 +10,11 @@
             <objects>
                 <glanceController id="aGO-KN-tg4" customClass="GlanceController">
                     <items>
-                        <group alignment="left" id="ruo-Oe-tXN"/>
+                        <group alignment="left" id="ruo-Oe-tXN">
+                            <items>
+                                <label alignment="left" text="Glance" id="z3q-yr-rQq"/>
+                            </items>
+                        </group>
                         <group alignment="left" id="0s8-7H-BIM"/>
                     </items>
                 </glanceController>
@@ -22,11 +26,56 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" alignment="left" title="KumaKuma" id="48y-4d-0Hi"/>
+                        <label width="136" alignment="left" text="Page 1" id="D6t-xL-wdb"/>
                     </items>
+                    <connections>
+                        <segue destination="iFr-n9-8Ni" kind="relationship" relationship="nextPage" id="yxd-vx-SeW"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="97" y="414"/>
+        </scene>
+        <!--Second Interface Controller-->
+        <scene sceneID="Vcq-7k-yQq">
+            <objects>
+                <controller id="iFr-n9-8Ni" customClass="SecondInterfaceController">
+                    <items>
+                        <label width="136" alignment="left" text="Page 2" id="8mH-Fy-26j"/>
+                    </items>
+                    <connections>
+                        <segue destination="7gy-RF-H6V" kind="relationship" relationship="nextPage" id="7AW-jV-xd2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="439" y="180"/>
+        </scene>
+        <!--Table Interface Controller-->
+        <scene sceneID="qnU-vN-TVz">
+            <objects>
+                <controller id="7gy-RF-H6V" customClass="TableInterfaceController">
+                    <items>
+                        <label width="135" alignment="left" text="Page 3" id="QbQ-7s-UsB"/>
+                        <table alignment="left" id="ZTX-tK-Ohb">
+                            <items>
+                                <tableRow identifier="tableRowController" id="AGt-iy-J3J" customClass="TableRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="2gb-tK-V55">
+                                        <items>
+                                            <label width="128" alignment="left" text="Label" id="70U-Vf-9YS"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="70U-Vf-9YS" id="DXT-ff-IoP"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="ZTX-tK-Ohb" id="Pny-Yj-PEb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="690" y="466"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
